@@ -33,16 +33,8 @@
     </ul>
 
     <div class="flex space-x-6">
-      <button
-        class="text-sm leading-normal tracking-wide font-semibold text-gray-800 hover:text-red-600 transition duration-500 ease-in-out"
-      >
-        Sign In
-      </button>
-      <button
-        class="px-6 py-2 text-sm leading-normal tracking-wide font-semibold text-red-600 border border-red-600 hover:bg-red-600 hover:text-white transition duration-500 ease-in-out rounded-full"
-      >
-        Sign Up
-      </button>
+      <BaseButton type="link">Sign In</BaseButton>
+      <BaseButton type="ghost">Sign Up</BaseButton>
     </div>
   </nav>
 </template>
