@@ -144,7 +144,7 @@
       </div>
     </section>
 
-    <section class="mt-16 pb-64 w-full">
+    <section class="mt-16 w-full">
       <div class="text-center flex items-center justify-center">
         <SeactionHeader
           title="Trusted by Thousands of Happy Customer"
@@ -162,6 +162,17 @@
           />
         </Slider>
       </div>
+    </section>
+
+    <section
+      class="mt-16 mb-64 px-16 py-8 flex items-center justify-between w-full shadow-lg rounded-lg"
+    >
+      <SeactionHeader
+        title="Subscribe Now for Get Special Features!"
+        subtitle="Let's subscribe with us and find the fun."
+      />
+
+      <BaseButton>Subscribe Now</BaseButton>
     </section>
   </div>
 </template>
@@ -183,6 +194,7 @@ import DiscordIcon from '@/assets/images/discord.svg'
 import SpotifyIcon from '@/assets/images/spotify.svg'
 import Slider from '@/components/Slider'
 import CustomerCard from '@/components/CustomerCard'
+import BaseButton from '@/components/BaseButton'
 
 export default {
   name: 'Home',
@@ -194,7 +206,8 @@ export default {
     ListItem,
     PlanCard,
     Slider,
-    CustomerCard
+    CustomerCard,
+    BaseButton
   },
 
   data() {
