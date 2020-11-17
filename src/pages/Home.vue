@@ -255,54 +255,30 @@
         <div class="flex flex-1 justify-end space-x-16">
           <List class="space-y-2">
             <ListItem class="text-sm font-bold text-gray-800">Product</ListItem>
-            <ListItem class="text-sm font-medium text-gray-600"
-              >Donwload</ListItem
-            >
-            <ListItem class="text-sm font-medium text-gray-600"
-              >Pricing</ListItem
-            >
-            <ListItem class="text-sm font-medium text-gray-600"
-              >Locations</ListItem
-            >
-            <ListItem class="text-sm font-medium text-gray-600"
-              >Server</ListItem
-            >
-            <ListItem class="text-sm font-medium text-gray-600"
-              >Countries</ListItem
-            >
-            <ListItem class="text-sm font-medium text-gray-600">Blog</ListItem>
+            <ListItem><BaseLink to="#">Donwload</BaseLink></ListItem>
+            <ListItem><BaseLink to="#">Pricing</BaseLink></ListItem>
+            <ListItem><BaseLink to="#">Locations</BaseLink></ListItem>
+            <ListItem><BaseLink to="#">Server</BaseLink></ListItem>
+            <ListItem><BaseLink to="#">Countries</BaseLink></ListItem>
+            <ListItem><BaseLink to="#">Blog</BaseLink></ListItem>
           </List>
 
           <List class="space-y-2">
             <ListItem class="text-sm font-bold text-gray-800">Engage</ListItem>
-            <ListItem class="text-sm font-medium text-gray-600"
-              >LaslesVPN?</ListItem
-            >
-            <ListItem class="text-sm font-medium text-gray-600">FAQ</ListItem>
-            <ListItem class="text-sm font-medium text-gray-600"
-              >Tutorials</ListItem
-            >
-            <ListItem class="text-sm font-medium text-gray-600"
-              >Aboout Us</ListItem
-            >
-            <ListItem class="text-sm font-medium text-gray-600"
-              >Privacy Policy</ListItem
-            >
-            <ListItem class="text-sm font-medium text-gray-600"
-              >Terms of Service</ListItem
-            >
+            <ListItem><BaseLink to="#">LaslesVPN?</BaseLink></ListItem>
+            <ListItem><BaseLink to="#">FAQ</BaseLink></ListItem>
+            <ListItem><BaseLink to="#">Tutorials</BaseLink></ListItem>
+            <ListItem><BaseLink to="#">Aboout Us</BaseLink></ListItem>
+            <ListItem><BaseLink to="#">Privacy Policy</BaseLink></ListItem>
+            <ListItem><BaseLink to="#">Terms of Service</BaseLink></ListItem>
           </List>
 
-          <List class="space-y-2">
+          <List class="flex flex-col space-y-2">
             <ListItem class="text-sm font-bold text-gray-800"
               >Earn Money</ListItem
             >
-            <ListItem class="text-sm font-medium text-gray-600"
-              >Affiliate</ListItem
-            >
-            <ListItem class="text-sm font-medium text-gray-600"
-              >Become Partner</ListItem
-            >
+            <ListItem><BaseLink to="#">Affiliate</BaseLink></ListItem>
+            <ListItem><BaseLink to="#">Become Partner</BaseLink></ListItem>
           </List>
         </div>
       </div>
@@ -329,6 +305,7 @@ import SpotifyIcon from '@/assets/images/spotify.svg'
 import Slider from '@/components/Slider'
 import CustomerCard from '@/components/CustomerCard'
 import BaseButton from '@/components/BaseButton'
+import BaseLink from '@/components/BaseLink'
 
 export default {
   name: 'Home',
@@ -342,7 +319,8 @@ export default {
     PlanCard,
     Slider,
     CustomerCard,
-    BaseButton
+    BaseButton,
+    BaseLink
   },
 
   data() {

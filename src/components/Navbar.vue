@@ -4,33 +4,13 @@
       <img class="h-8 w-auto" :src="logo" alt="laslesVPN Logo" />
     </div>
 
-    <ul class="flex items-center space-x-8">
-      <li
-        class="text-sm text-gray-600 font-normal tracking-wide hover:text-red-600 cursor-pointer"
-      >
-        About
-      </li>
-      <li
-        class="text-sm text-gray-600 font-normal tracking-wide hover:text-red-600 cursor-pointer"
-      >
-        Features
-      </li>
-      <li
-        class="text-sm text-gray-600 font-normal tracking-wide hover:text-red-600 cursor-pointer"
-      >
-        Pricing
-      </li>
-      <li
-        class="text-sm text-gray-600 font-normal tracking-wide hover:text-red-600 cursor-pointer"
-      >
-        Testimonials
-      </li>
-      <li
-        class="text-sm text-gray-600 font-normal tracking-wide hover:text-red-600 cursor-pointer"
-      >
-        Help
-      </li>
-    </ul>
+    <List class="flex items-center space-x-8">
+      <ListItem><BaseLink to="#">About</BaseLink></ListItem>
+      <ListItem><BaseLink to="#">Features</BaseLink></ListItem>
+      <ListItem><BaseLink to="#">Pricing</BaseLink></ListItem>
+      <ListItem><BaseLink to="#">Testimonials</BaseLink></ListItem>
+      <ListItem><BaseLink to="#">Help</BaseLink></ListItem>
+    </List>
 
     <div class="flex space-x-6">
       <BaseButton type="link">Sign In</BaseButton>
@@ -41,9 +21,19 @@
 
 <script>
 import logo from '@/assets/logo.svg'
+import List from './List'
+import ListItem from './ListItem'
+import BaseLink from './BaseLink'
 
 export default {
   name: 'Navbar',
+
+  components: {
+    List,
+    ListItem,
+    BaseLink
+  },
+
   data() {
     return {
       logo: logo
