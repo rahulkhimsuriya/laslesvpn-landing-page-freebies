@@ -3,13 +3,17 @@
     <h3
       class="text-3xl text-gray-800 font-semibold leading-tight tracking-wide"
     >
-      {{ title }}
+      <slot name="title">
+        {{ title }}
+      </slot>
     </h3>
 
     <p
       class="mt-6 text-sm text-gray-600 font-normal leading-normal tracking-wide"
     >
-      {{ subtitle }}
+      <slot name="subtitle">
+        {{ subtitle }}
+      </slot>
     </p>
   </div>
 </template>
@@ -20,15 +24,13 @@ export default {
 
   props: {
     title: {
-      type: String,
-      required: true
+      type: String
     },
     subtitle: {
-      type: String,
-      required: true
+      type: String
     }
   }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

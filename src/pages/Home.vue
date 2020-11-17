@@ -110,6 +110,39 @@
         </PlanCard>
       </div>
     </section>
+
+    <section class="mt-24 w-full">
+      <div class="text-center flex items-center justify-center">
+        <SeactionHeader title="Huge Global Network of Fast VPN">
+          <template #subtitle>
+            See <strong>LaslesVPN</strong> everywhere to make it easier for you
+            when you move locations
+          </template>
+        </SeactionHeader>
+      </div>
+
+      <div class="mt-12">
+        <img
+          class="mx-auto"
+          src="@/assets/images/huge_global.svg"
+          alt="Huge Global"
+        />
+      </div>
+
+      <div class="mt-8 flex items-center justify-between">
+        <div
+          class="opacity-50"
+          v-for="(partner, index) in partners"
+          :key="index"
+        >
+          <img
+            :src="partner.image"
+            :alt="partner.name"
+            style="filter:  grayscale(100%)"
+          />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -123,6 +156,11 @@ import List from '@/components/List'
 import ListItem from '@/components/ListItem'
 import PlanCard from '@/components/PlanCard'
 import PlanImage from '@/assets/images/plan.svg'
+import NetflixIcon from '@/assets/images/netflix.svg'
+import RedditIcon from '@/assets/images/reddit.svg'
+import AmazonIcon from '@/assets/images/amazon.svg'
+import DiscordIcon from '@/assets/images/discord.svg'
+import SpotifyIcon from '@/assets/images/spotify.svg'
 
 export default {
   name: 'Home',
@@ -197,6 +235,13 @@ export default {
             'Get New Features'
           ]
         }
+      ],
+      partners: [
+        { name: 'Netflix', image: NetflixIcon },
+        { name: 'Reddit', image: RedditIcon },
+        { name: 'Amazon', image: AmazonIcon },
+        { name: 'Discord', image: DiscordIcon },
+        { name: 'Sportify', image: SpotifyIcon }
       ]
     }
   }
