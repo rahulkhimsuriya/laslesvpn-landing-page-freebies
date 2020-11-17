@@ -1,19 +1,25 @@
 <template>
   <div id="app" class="bg-white container px-4 mx-auto">
-    <Navbar />
-    <HeroSection />
+    <header>
+      <Navbar />
+    </header>
+
+    <main>
+      <Home />
+    </main>
   </div>
 </template>
 
 <script>
+import Home from '@/pages/Home'
 import Navbar from '@/components/Navbar'
-import HeroSection from '@/components/HeroSection'
 
 export default {
   name: 'App',
+
   components: {
-    Navbar,
-    HeroSection
+    Home,
+    Navbar
   }
 }
 </script>
