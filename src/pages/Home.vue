@@ -143,6 +143,26 @@
         </div>
       </div>
     </section>
+
+    <section class="mt-16 pb-64 w-full">
+      <div class="text-center flex items-center justify-center">
+        <SeactionHeader
+          title="Trusted by Thousands of Happy Customer"
+          subtitle="These are the stories of our customers who have joined us with great pleasure when using this crazy feature."
+        />
+      </div>
+
+      <div class="mt-12">
+        <Slider :options="sliderOptions">
+          <CustomerCard
+            class="mx-6 w-1/3 h-48 border hover:border-red-400"
+            v-for="(customer, index) in customers"
+            :key="index"
+            :customer="customer"
+          />
+        </Slider>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -161,6 +181,8 @@ import RedditIcon from '@/assets/images/reddit.svg'
 import AmazonIcon from '@/assets/images/amazon.svg'
 import DiscordIcon from '@/assets/images/discord.svg'
 import SpotifyIcon from '@/assets/images/spotify.svg'
+import Slider from '@/components/Slider'
+import CustomerCard from '@/components/CustomerCard'
 
 export default {
   name: 'Home',
@@ -170,7 +192,9 @@ export default {
     SeactionHeader,
     List,
     ListItem,
-    PlanCard
+    PlanCard,
+    Slider,
+    CustomerCard
   },
 
   data() {
@@ -242,6 +266,33 @@ export default {
         { name: 'Amazon', image: AmazonIcon },
         { name: 'Discord', image: DiscordIcon },
         { name: 'Sportify', image: SpotifyIcon }
+      ],
+      sliderOptions: { freeScroll: true, wrapAround: true, contain: true },
+      customers: [
+        {
+          name: 'Viezh Robert',
+          image: 'https://randomuser.me/api/portraits/men/42.jpg',
+          location: 'Warsaw, Poland',
+          star: '4.5',
+          quote:
+            '“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.'
+        },
+        {
+          name: 'Yessica Christy',
+          image: 'https://randomuser.me/api/portraits/women/84.jpg',
+          location: 'Shanxi, China',
+          star: '4.5',
+          quote:
+            '“I like it because I like to travel far and still can connect with high speed.”.'
+        },
+        {
+          name: 'Kim Young Jou',
+          image: 'https://randomuser.me/api/portraits/men/64.jpg',
+          location: 'Warsaw, Poland',
+          star: '4.5',
+          quote:
+            '“This is very unusual for my business that currently requires a virtual private network that has high security.”.'
+        }
       ]
     }
   }
