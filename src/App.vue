@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="bg-white container px-4 mx-auto">
-    <header>
+  <div id="app" class="bg-white">
+    <header class="container px-4 mx-auto">
       <Navbar />
     </header>
 
