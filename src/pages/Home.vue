@@ -60,7 +60,7 @@
 
         <List class="mt-8 space-y-4">
           <ListItem
-            class="leading-none tracking-wider"
+            class="text-sm font-medium text-gray-600 leading-none tracking-wider"
             v-for="feature in featuresList"
             :key="feature"
           >
@@ -83,6 +83,33 @@
         </List>
       </div>
     </section>
+
+    <section class="mt-16 w-full">
+      <div class="text-center flex items-center justify-center">
+        <SeactionHeader
+          title="Choose Your Plan"
+          subtitle="Let's choose the package that is best for you and explore it happily and cheerfully."
+        />
+      </div>
+
+      <div class="mt-10 grid grid-cols-3 gap-24">
+        <PlanCard v-for="(plan, index) in plans" :key="index" :plan="plan">
+          <template #footer>
+            <h5 class="text-xl font-semibold text-gray-900">
+              {{ plan.price }}
+              <span
+                class="font-light text-gray-700"
+                v-if="plan.price != 'Free'"
+              >
+                /mo
+              </span>
+            </h5>
+
+            <BaseButton class="mt-4 px-12" type="ghost">Select</BaseButton>
+          </template>
+        </PlanCard>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -94,6 +121,8 @@ import LocationIcon from '@/assets/images/location.svg'
 import SeactionHeader from '@/components/SeactionHeader'
 import List from '@/components/List'
 import ListItem from '@/components/ListItem'
+import PlanCard from '@/components/PlanCard'
+import PlanImage from '@/assets/images/plan.svg'
 
 export default {
   name: 'Home',
@@ -102,7 +131,8 @@ export default {
     HeroCard,
     SeactionHeader,
     List,
-    ListItem
+    ListItem,
+    PlanCard
   },
 
   data() {
@@ -129,6 +159,44 @@ export default {
         'Internet without borders.',
         'Supercharged VPN',
         'No specific time limits.'
+      ],
+      plans: [
+        {
+          name: 'Free Plan',
+          image: PlanImage,
+          price: 'Free',
+          features: [
+            'Unlimited Bandwitch',
+            'Encrypted Connection',
+            'No Traffic Logs',
+            'Works on All Devices'
+          ]
+        },
+        {
+          name: 'Standard Plan',
+          image: PlanImage,
+          price: '$9',
+          features: [
+            'Unlimited Bandwitch',
+            'Encrypted Connection',
+            'No Traffic Logs',
+            'Works on All Devices',
+            'Connect Anyware'
+          ]
+        },
+        {
+          name: 'Premium Plan',
+          image: PlanImage,
+          price: '$12',
+          features: [
+            'Unlimited Bandwitch',
+            'Encrypted Connection',
+            'No Traffic Logs',
+            'Works on All Devices',
+            'Connect Anyware',
+            'Get New Features'
+          ]
+        }
       ]
     }
   }

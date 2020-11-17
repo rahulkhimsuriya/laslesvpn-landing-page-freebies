@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="max-w-sm">
     <h3
       class="text-3xl text-gray-800 font-semibold leading-tight tracking-wide"
     >

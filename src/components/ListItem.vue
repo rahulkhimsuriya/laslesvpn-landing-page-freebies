@@ -4,7 +4,7 @@
       <slot name="icon"></slot>
     </div>
 
-    <div class="ml-4 text-sm font-medium text-gray-600">
+    <div class="ml-4">
       <slot></slot>
     </div>
   </li>
