@@ -1,11 +1,6 @@
 <template>
   <div class="flex items-center justify-center">
-    <div>
-      <slot name="icon"></slot>
-    </div>
-    <div>
-      <slot></slot>
-    </div>
+    <slot></slot>
   </div>
 </template>
 

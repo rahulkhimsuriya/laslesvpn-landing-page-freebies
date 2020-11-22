@@ -17,7 +17,7 @@
           v-for="(feature, index) in plan.features"
           :key="index"
         >
-          <template #icon>
+          <span class="mr-4">
             <svg
               class="w-4 h-4 text-green-600"
               fill="currentColor"
@@ -30,7 +30,7 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
-          </template>
+          </span>
 
           {{ feature }}
         </ListItem>

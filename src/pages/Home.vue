@@ -28,13 +28,13 @@
             v-for="(item, idx) in heroItems"
             :key="idx"
           >
-            <template #icon>
+            <span class="mr-6">
               <div class="p-2 text-white bg-red-200 rounded-full">
                 <img class="h-4 w-4 text-red-200" :src="item.icon" alt="icon" />
               </div>
-            </template>
+            </span>
 
-            <div class="ml-6">
+            <div>
               <h4 class="text-lg text-gray-800 font-bold tracking-wider">
                 {{ item.title }}
               </h4>
@@ -64,7 +64,7 @@
             v-for="feature in featuresList"
             :key="feature"
           >
-            <template #icon>
+            <span class="mr-4">
               <svg
                 class="w-6 h-6 text-green-600"
                 fill="currentColor"
@@ -77,7 +77,7 @@
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </template>
+            </span>
             {{ feature }}
           </ListItem>
         </List>
